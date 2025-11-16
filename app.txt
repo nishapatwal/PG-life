@@ -1,2 +1,1 @@
-Main: different change to Line 2
-Hello
+Main change: This is a different update on the main branch.
