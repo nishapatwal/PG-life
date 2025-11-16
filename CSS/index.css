@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/Student1.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    height:550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+}
+
+.hero h1 {
+    font-size: 40px;
+    /* Responsive font size */
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+    /* Max width for larger screens */
+    box-shadow: 0 4px 15px rgb(86, 87, 99);
+    border-radius: 5px;
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
+    /* Allows the input to take up available space */
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 5px 0 0 5px;
+    /* Rounded corners on the left side */
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    /* Removes the blue glow on click */
+}
+
+.search-container button {
+    border: none;
+    background-color: #636b7d;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    /* Rounded corners on the right side */
+}
+
+/* You can use an SVG or an icon font for a better search icon */
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* New rule to change the fill color of the SVG path */
+.search-icon path {
+    fill: #ffffff; /* Example: blue */
+    /* Or any other color you want */
+}
+.Major-cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.Major-cities h2 {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.city-list {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center; /* Center the items horizontally */
+    gap: 40px; /* Space between items */
+    max-width: 1500px; /* Optional: limit the max width of the city list itself */
+    margin-top: 40px; /* Center the list within its parent */
+}
+
+.city-item {
+    text-align: center;
+    text-decoration: none; /* Remove underline from anchor tags */
+}
+
+.city-item a {
+    text-decoration: none; /* Ensure no underline on link */
+    color: inherit; /* Inherit text color from parent */
+    display: flex; /* Make the anchor content a flex container */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items within the column */
+}
+
+.city-icon-container {
+    width: 150px; /* Diameter of the circle */
+    height: 150px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes it a circle */
+    border: 1px solid #ccc; /* Light gray border */
+    display: flex; /* Use flexbox to center the icon inside */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px; /* Space between icon and city name */
+    background-color: #f8f8f8; /* Very light background for the circle */
+    box-shadow: 5px 5px 20px rgba(5, 5, 5, 0.2);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.city-icon-container:hover {
+    border-color: #007bff; /* Highlight border on hover */
+    box-shadow: 5px 5px 20px rgba(5, 5, 5, 0.2); /* Subtle shadow on hover */
+    background-color: #e6f2ff; /* Light blue background on hover */
+}
+
+.city-icon {
+    width: 120px; /* Size of the SVG icon inside the circle */
+    height: 120px;
+    filter: grayscale(100%); /* Example: make icons black and white */
+    opacity: 0.7; /* Make them slightly faded */
+    transition: all 0.3s ease;
+}
+
+.city-icon-container:hover .city-icon {
+    filter: grayscale(0%); /* Restore original colors on hover (if applicable) */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* If you are using Font Awesome icons instead of SVG images: */
+/*
+.city-icon-container i {
+    font-size: 60px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.city-icon-container:hover i {
+    color: #007bff; // Change icon color on hover
+}
+*/
+
+.city-item a:hover .city-name {
+    color: #007bff; /* Blue text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .city-list {
+        gap: 30px; /* Reduce gap on smaller screens */
+    }
+    .city-icon-container {
+        width: 100px;
+        height: 100px;
+    }
+    .city-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .city-list {
+        flex-direction: row; /* Keep row for small screens, allow wrapping */
+        justify-content: center;
+        gap: 20px;
+    }
+    .city-icon-container {
+        width: 90px;
+        height: 90px;
+    }
+    .city-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+.footer {
+    margin-top:100px;
+    background-color: #333333;
+    font-size: 13px;
+}
+
+.footer-container {
+    padding: 24px;
+}
+
+.footer-cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-city {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    .footer-city {
+        width: 100%;
+    }
+}
+
+.footer-city a {
+    color: #ffffff;
+}
+
+.footer-copyright {
+    color: #a9a9a9;
+    text-align: center;
+    padding-top: 24px;
+}

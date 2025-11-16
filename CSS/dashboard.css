@@ -1,0 +1,125 @@
+/* Dashboard Specific Styles */
+
+.main-content {
+    padding: 30px 0; /* Add some vertical padding */
+    background-color: #f8f9fa; /* Light background for the page */
+    min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+}
+
+.page-container {
+    max-width: 960px; /* Max width for content, similar to your other pages */
+    margin: 0 auto;
+    padding: 0 15px; /* Padding for smaller screens */
+}
+
+.page-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left; /* Align to left as in the image */
+}
+
+.profile-card {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.profile-avatar-container {
+    margin-right: 30px;
+}
+
+.profile-avatar {
+    width: 120px; /* Size of the avatar */
+    height: 120px;
+    border-radius: 50%; /* Make it circular */
+    background-color: #e9ecef; /* Light background for the placeholder avatar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* If you have a specific avatar image, remove the background-color and use img directly */
+.profile-avatar {
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Placeholder for the grey avatar icon (if not using an image) */
+.profile-avatar-container::before {
+    content: "\f007"; /* Font Awesome user icon unicode */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Solid icon */
+    font-size: 60px;
+    color: #6c757d;
+}
+
+.profile-details {
+    flex-grow: 1; /* Allows details to take up remaining space */
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-email,
+.profile-phone,
+.profile-college {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.edit-profile-link {
+    font-size: 0.9rem;
+    color: #007bff; /* Bootstrap primary blue */
+    text-decoration: none;
+    margin-top: 10px; /* Space above link */
+    display: inline-block; /* Allows margin-top */
+}
+
+.edit-profile-link:hover {
+    text-decoration: underline;
+}
+
+.interested-properties-heading {
+    margin-top: 50px; /* Space above this heading */
+}
+
+.interested-properties-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    min-height: 200px; /* Minimum height for the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .profile-card {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center;
+    }
+
+    .profile-avatar-container {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space below avatar */
+    }
+
+    .page-heading {
+        font-size: 1.8rem;
+    }
+}
