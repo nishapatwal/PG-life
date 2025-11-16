@@ -1,0 +1,16 @@
+name: CI Build and Test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # ADD THIS LINE: Enables the manual run button in the GitHub UI
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Say Hello
+        run: echo "CI pipeline ran successfully!"
