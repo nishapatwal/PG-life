@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-Main change: This is a different update on the main branch.
-=======
-Some code
-Feature A
->>>>>>> 5d81ca5 (Implement Feature A)
+Main: different change to Line 2
+Hello
